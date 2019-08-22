@@ -2,7 +2,7 @@
 MTCNN + Deep_Sort算法实现人脸跟踪
 
 # MtCNN算法
-# Dependencies
+Dependencies：
 * Tensorflow v1.0.0 or higher
 * TF-Slim
 * Python 2.7/3.5
@@ -15,7 +15,7 @@ MTCNN + Deep_Sort算法实现人脸跟踪
   视频人脸检测代码：testing/camera.py 
 
 # Deep_Sort算法
-# Dependencies
+Dependencies：
     python2.7/3
     NumPy
     sklean
