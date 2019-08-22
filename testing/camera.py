@@ -56,20 +56,10 @@ receive：该线程接收图片
 realse：该线程处理图片，进行人脸检测
 '''
 def receive(stack):
-   
-    '''
-    rtsp://admin:px68018888@192.168.63.189:554 #公司摄像头
-    rtsp://admin:12345daoge@172.16.6.3:554/Streaming/Channels/1301 #小区门口监控
-    rtsp://admin:px68018888@172.16.12.79:554 #万达步行街
-    rtsp://admin:liguowei123456@172.16.12.65:554 #万达A门
-    rtsp://admin:liguowei123456@172.16.12.75:554 #万达C门地下室电梯出口
-    rtsp://admin:liguowei123456@172.16.12.66:554 
-    rtsp://admin:liguowei123456@172.16.12.68:554 #C门
-    '''
 
     top = 100
-    url = 'rtsp://admin:px68018888@172.16.12.79:554'
-    cap = cv2.VideoCapture(url)
+    # url = ''
+    cap = cv2.VideoCapture(0)
     ret, frame = cap.read()
     while True:
         ret, frame = cap.read()
@@ -110,13 +100,6 @@ def realse(stack):
                 break
     cv2.destroyAllWindows()
     
-
-'''
-Code需优化部分: 
-    采用线程阻塞 ;
-    模型要复用,一个模型检测多个输入的数据;
-    检测做到16路视频输入;
-'''
 if __name__=='__main__':
     t = Manager().list()
     t1 = Process(target=receive, args=(t,))
