@@ -21,7 +21,7 @@ MTCNN + Deep_Sort算法进行人脸跟踪
     sklean
     OpenCV
     Pillow
-  Additionally, feature generation requires TensorFlow-1.4.0.
+  Additionally, feature generation requires TensorFlow.
 
 # 相关代码
  1.结合mtcnn人脸检测跟踪的代码： mtcnn_sort.py
