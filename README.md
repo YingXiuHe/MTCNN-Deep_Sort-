@@ -1,5 +1,5 @@
 # MTCNN-Deep_Sort
-MTCNN + Deep_Sort算法进行人脸跟踪
+MTCNN + Deep_Sort算法实现人脸跟踪
 
 # MtCNN算法
 # Dependencies
