@@ -61,7 +61,7 @@ def mtcnn(stage):
 
 
 '''
-python多线程：
+python多进程：
 receive：接收图片
 realse：处理图片，进行人脸检测+跟踪
 '''
@@ -141,10 +141,6 @@ def realse(stack):
     
     cv2.destroyAllWindows()
 
-'''
-bug：考虑模型复用问题
-    线程处理图片数据问题
-'''
 if __name__=='__main__':
         
     t = Manager().list()
