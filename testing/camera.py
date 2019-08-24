@@ -99,7 +99,7 @@ def realse(stack):
                 break
     cv2.destroyAllWindows()
     
-if __name__=='__main__':
+if __name__ == '__main__':
     t = Manager().list()
     t1 = Process(target=receive, args=(t,))
     t2 = Process(target=realse, args=(t,))
