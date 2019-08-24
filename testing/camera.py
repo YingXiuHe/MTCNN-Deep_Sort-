@@ -2,8 +2,7 @@
 #author: lxz-hxy
 
 '''
-MTCNN在图片以及视频流上进行人脸检测，
-并且将检测到的人脸从图像或者视频流中截取下来保存到指定目录中；
+MTCNN在图片以及视频流上进行人脸检测；
 '''
 import tensorflow as tf
 import numpy as np
@@ -51,9 +50,9 @@ def net(stage):
 
 
 '''
-python多线程：
-receive：该线程接收图片
-realse：该线程处理图片，进行人脸检测
+python多进程：
+receive：接收图片
+realse：处理图片，进行人脸检测
 '''
 def receive(stack):
 
