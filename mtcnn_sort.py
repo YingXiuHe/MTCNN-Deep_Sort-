@@ -141,12 +141,12 @@ def realse(stack):
     
     cv2.destroyAllWindows()
 
-if __name__=='__main__':
-        
-    t = Manager().list()
-    t1 = Process(target=receive, args=(t,))
-    t2 = Process(target=realse, args=(t,))
-    t1.start()
-    t2.start()
-    t1.join()
-    t2.terminate()
+    
+if __name__ == '__main__':    
+    p = Manager().list()
+    p1 = Process(target=receive, args=(p,))
+    p2 = Process(target=realse, args=(p,))
+    p1.start()
+    p2.start()
+    p1.join()
+    p2.terminate()
