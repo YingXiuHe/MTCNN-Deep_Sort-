@@ -60,7 +60,7 @@ def mtcnn(stage):
     return detectors
 
 '''
-python多线程：
+python多进程：
 receive：接收图片
 realse：处理图片，进行人脸检测+跟踪
 '''
@@ -137,11 +137,8 @@ def realse(stack):
                 break
     cv2.destroyAllWindows()
 
-'''
-bug：考虑模型复用问题
-'''
 
-if __name__=='__main__':
+if __name__ == '__main__':
     #os.environ["CUDA_VISIBLE_DEVICES"] = '0'
     #config = tf.ConfigProto()
     #config.gpu_options.per_process_gpu_memory_fraction = 0.5
